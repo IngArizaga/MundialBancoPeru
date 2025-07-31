@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banca Unificada | Evaluación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-university"></i> Banca Universal PRO</h1>
+            <p>Gestiona todas tus cuentas en un solo lugar</p>
+            <button id="toggle-theme"><i class="fas fa-moon"></i></button>
+        </header>
+
+        <div class="dashboard">
+            <div class="saldo">
+                <h2><i class="fas fa-wallet"></i> Saldo Total: <span id="saldo-total">$0.00</span></h2>
+            </div>
+
+            <div class="cuentas">
+                <h3><i class="fas fa-link"></i> Cuentas Vinculadas</h3>
+                <ul id="lista-cuentas"></ul>
+                <button id="agregar-cuenta"><i class="fas fa-plus"></i> Vincular Cuenta</button>
+            </div>
+
+            <div class="operaciones">
+                <h3><i class="fas fa-exchange-alt"></i> Operaciones</h3>
+                <select id="tipo-operacion">
+                    <option value="transferir">Transferir</option>
+                    <option value="retirar">Retirar</option>
+                    <option value="depositar">Depositar</option>
+                </select>
+                <input type="number" id="monto" placeholder="Monto ($)" min="0.01" step="0.01">
+                <button id="ejecutar"><i class="fas fa-check-circle"></i> Ejecutar</button>
+                <div id="mensaje" class="mensaje"></div>
+            </div>
+
+            <div class="historial">
+                <h3><i class="fas fa-history"></i> Historial</h3>
+                <ul id="lista-historial"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
